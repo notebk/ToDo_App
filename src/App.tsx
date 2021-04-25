@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 // 2️⃣: uncomment below
 import { GetTodos, TodoType } from "./agent";
