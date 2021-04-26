@@ -17,17 +17,16 @@ function App() {
 
   const refreshTodoList = async () => {
     let response = await GetTodos();
-    console.log(response);
     setTodoList(response.todos);
   };
 
   const createTodo = async () => {
-    let response = await CreateTodo(newTodo);
+    let response = await CreateTodo(newTodo); // eslint-disable-line
     refreshTodoList();
   };
 
   const modifyTodo = async (id: string) => {
-    let response = await ModifyTodo(id);
+    let response = await ModifyTodo(id); // eslint-disable-line
     refreshTodoList();
   };
 
@@ -45,7 +44,7 @@ function App() {
 
           {todoList.map((t) => {
             return !t.isComplete ? (
-              <Checkbox
+              <Checkbox // eslint-disable-line
                 todo={t}
                 onChange={() => {
                   modifyTodo(t.id);
@@ -57,7 +56,7 @@ function App() {
           })}
           {todoList.map((t) => {
             return t.isComplete ? (
-              <Checkbox
+              <Checkbox // eslint-disable-line
                 todo={t}
                 onChange={() => {
                   modifyTodo(t.id);
